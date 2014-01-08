@@ -23,6 +23,9 @@ end
 compile '/js/*' do
 end
 
+compile '/assets/*' do
+end
+
 compile '*' do
   if item.binary?
     # don’t filter binary items
@@ -42,6 +45,11 @@ end
 
 route '/css/*' do
   item.identifier.chop + '.' + item[:extension]
+end
+
+route '/assets/*' do
+  # /assets/foo.html/ → /foo.html
+  item.identifier[7..-2]
 end
 
 route '*' do

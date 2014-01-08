@@ -1,4 +1,4 @@
-{:	data{I"/:ET{:default{	:	lastI"<!DOCTYPE HTML>
+{:	data{I"/:ET{:default{	:	lastI"<!DOCTYPE HTML>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -180,7 +180,7 @@ a:hover {
   line-height: 20px;
 }
 ;T;	@;
-@I"/css/screen/;T{;{;I"rL/* ==========================================================================
+@I"/css/screen/;T{;{;I"cL/* ==========================================================================
    Table of Contents
    ========================================================================== */
 
@@ -214,11 +214,11 @@ a:hover {
 /* Import the font file with the icons in it */
 @font-face {
     font-family: 'icons';
-    src:url('../../assets/fonts/icons.eot');
-    src:url('../../assets/fonts/icons.eot?#iefix') format('embedded-opentype'),
-        url('../../assets/fonts/icons.woff') format('woff'),
-        url('../../assets/fonts/icons.ttf') format('truetype'),
-        url('../../assets/fonts/icons.svg#icons') format('svg');
+    src:url('../assets/fonts/icons.eot');
+    src:url('../assets/fonts/icons.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/icons.woff') format('woff'),
+        url('../assets/fonts/icons.ttf') format('truetype'),
+        url('../assets/fonts/icons.svg#icons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -1746,4 +1746,4 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
     });
 
 }(jQuery));;T;	@0;
-@0:versioni
+@0I"(/assets/assets/fonts/icons.dev.svg/;T{;{ I"$/assets/assets/fonts/icons.eot/;T{;{ I"$/assets/assets/fonts/icons.svg/;T{;{ I"$/assets/assets/fonts/icons.ttf/;T{;{ I"%/assets/assets/fonts/icons.woff/;T{;{ I"2/assets/assets/images/kasper-theme-index.png/;T{;{ I"1/assets/assets/images/kasper-theme-post.png/;T{;{ I"'/assets/assets/images/profile.png/;T{;{ :versioni
