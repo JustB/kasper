@@ -20,6 +20,9 @@ end
 compile '/css/*' do
 end
 
+compile '/js/*' do
+end
+
 compile '*' do
   if item.binary?
     # don’t filter binary items
@@ -31,6 +34,10 @@ end
 
 route '/stylesheet/' do
   '/style.css'
+end
+
+route '/js/*' do
+    item.identifier.chop + '.' + item[:extension]
 end
 
 route '/css/*' do
