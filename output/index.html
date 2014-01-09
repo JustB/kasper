@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>A Brand New nanoc Site - </title>
+    <title>A Brand New nanoc Site - Home</title>
     <meta name="description" content="{{ site.meta_description}}" /> <!-- TODO sistemare questa descrizione -->
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -20,26 +20,7 @@
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
 </head>
 <body class="home-template">
-    <!-- <h1>A Brand New nanoc Site</h1>
-
-<p>Youâve just created a new nanoc site. The page you are looking at right now is the home page for your site. To get started, consider replacing this default homepage with your own customized homepage. Some pointers on how to do so:</p>
-
-<ul>
-  <li><p><strong>Change this pageâs content</strong> by editing the âindex.htmlâ file in the âcontentâ directory. This is the actual page content, and therefore doesnât include the header, sidebar or style information (those are part of the layout).</p></li>
-  <li><p><strong>Change the layout</strong>, which is the âdefault.htmlâ file in the âlayoutsâ directory, and create something unique (and hopefully less bland).</p></li>
-</ul>
-
-<p>If you need any help with customizing your nanoc web site, be sure to check out the documentation (see sidebar), and be sure to subscribe to the discussion group (also see sidebar). Enjoy!</p> -->
-
-
----
-layout: default
-title: Home
-cover: false
-about: 'about.html'
----
-
-<header class="site-head" {% if page.cover %} style="background-image: url({{ page.cover }})"{% endif%}>
+    <header class="site-head">
 <div class="vertical">
     <div class="site-head-content" class="inner">
         {% if page.logo %}
@@ -57,42 +38,48 @@ about: 'about.html'
 </header>
 
 <main class="content" role="main">
-
-    {% for post in paginator.posts %}
-
+    
     <article class="post">
         <header class="post-header">
-            <span class="post-meta"><time datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time> {{!tags prefix="on "}}</span>
-            <h2 class="post-title"><a href="{{ post.url}}">{{ post.title }}</a></h2>
+            <span class="post-meta"><time datetime="2013-01-10 00:02:00 +0000">2013-01-10 00:02:00 +0000</time> {{!tags prefix="on "}}</span>
+            <h2 class="post-title"><a href="/2014/01/my-first-post/">My first post</a></h2>
 
         </header>
         <section class="post-excerpt">
-            {{post.excerpt}}
+            <p>Welcome to my blog.</p>
+
+<h2 id="where-am-i">Where am I?</h2>
+
         </section>
     </article>
+    
+    <article class="post">
+        <header class="post-header">
+            <span class="post-meta"><time datetime="2013-01-09 00:02:00 +0000">2013-01-09 00:02:00 +0000</time> {{!tags prefix="on "}}</span>
+            <h2 class="post-title"><a href="/2014/01/welcome-to-nanoc/">Welcome to Jekyll!</a></h2>
 
-    {% endfor %}
+        </header>
+        <section class="post-excerpt">
+            <p>You’ll find this post in your <code>_posts</code> directory - edit this post and re-build (or run with the <code>-w</code> switch) to see your changes!
+To add new posts, simply add a file in the <code>_posts</code> directory that follows the convention: YYYY-MM-DD-name-of-post.ext.</p>
 
-    <nav class="pagination" role="pagination">
+<p>Jekyll also offers powerful support for code snippets:</p>
 
-        {% if paginator.previous_page %}
-        {% if paginator.previous_page == 1 %}
-        <a class="newer-posts" href="/" title="Previous Page">&laquo; Newer Posts</a>
-        {% else %}
-        <a class="newer-posts" href="/page{{ paginator.previous_page }}/" title="Previous Page">&laquo; Newer Posts</a>
-        {% endif %}
-        {% endif %}
+<p>{% highlight ruby %}
+def print_hi(name)
+  puts “Hi, #{name}”
+end
+print_hi(‘Tom’)
+#=&gt; prints ‘Hi, Tom’ to STDOUT.
+{% endhighlight %}</p>
 
-        <span class="page-number"> Page {{paginator.page}} of {{paginator.total_pages}} </span>
-
-        {% if paginator.next_page %}
-        <a class="older-posts" href="/page{{ paginator.next_page }}/" title="Next Page">Older Posts &raquo;</a>
-        {% endif %}
-    </nav>
+<p>Check out the <a href="http://jekyllrb.com">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/mojombo/jekyll">Jekyll’s GitHub repo</a>.</p>
 
 
+        </section>
+    </article>
+    
 </main>
-
     <footer class="site-footer">
         <a class="subscribe icon-feed" href="{{ site.baseurl }}rss.xml"><span class="tooltip">Subscribe!</span></a>
         <div class="inner">
